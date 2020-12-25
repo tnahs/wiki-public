@@ -35,13 +35,19 @@ Data scrubbing is only supported for `Shared Folders` with `Enable data checksum
         2. In the `Select Target` tab
             - Select Storage Pools
 
-## Snapshots
+## Setup Storage Analyzer
 
-!!! note "TODO"
+Install `Storage Analyzer` from `Package Center`
 
-## Storage Analyzer
+:octicons-location-24: Where
 
-!!! note "TODO"
+`Storage Analyzer`
+
+:octicons-question-24: How
+
+1. Set a location for saving reports if one has not already been set. *Note that this can easily be changed at a later date.*
+2. Under `Report Profile`
+    - Click `Create` and follow the wizard to create a report.
 
 ## Clean Recycle Bin Task
 
@@ -69,16 +75,20 @@ Data scrubbing is only supported for `Shared Folders` with `Enable data checksum
         2. Under `Retention Policy`
             - Set `Number of days to retain deleted files` to `30`
 
-## Enable a Uninterruptible Power Supply Support
+## Enable Uninterruptible Power Supply Support
 
 :octicons-location-24: Where
 
 `Control Panel` • `Hardware & Power`
 
+:octicons-question-24: How
+
 - In the `UPS` tab
     - Check `Enable UPS support`
 
-:octicons-question-24: How
+## Snapshots
+
+!!! note "TODO"
 
 ## Hyper Backup
 

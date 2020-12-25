@@ -2,8 +2,6 @@
 
 ## Setup DHCP Server
 
-Minus ad velit eveniet. Enim tempore et in id. Optio aspernatur tempore impedit sapiente nemo. Dolor illum officia quisquam quis aut aut unde.
-
 :octicons-location-24: Where
 
 Check your router for specifics.
@@ -18,9 +16,13 @@ Check your router for specifics.
 
 !!! note "TODO"
 
-## Disable UPnP
+## Port Forwarding
 
-Autem quasi labore quo eos hic iusto. Dolorem et ipsum assumenda porro quidem. Voluptas sapiente molestias suscipit voluptas temporibus non. Rerum doloribus in dignissimos rerum quo. Magnam quo est qui.
+!!! note "TODO"
+
+<!-- <https://www.tp-link.com/us/support/faq/72/> -->
+
+## Disable UPnP
 
 :octicons-location-24: Where
 
@@ -30,7 +32,7 @@ Check your router for specifics.
 
 Check your router for specifics.
 
-## (Optional) Custom DNS Server
+## (Optional) Set Custom DNS Server
 
 !!! quote
 

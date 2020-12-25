@@ -22,8 +22,18 @@
 
 ## Common Network Ports & Protocols
 
+!!! quote
+
+    The port numbers in the range from 0 to 1023 (0 to 2^10^ − 1) are the well-known ports or system ports. They are used by system processes that provide widely used types of network services. On Unix-like operating systems, a process must execute with superuser privileges to be able to bind a network socket to an IP address using one of the well-known ports.
+
+    [...]
+
+    The range of port numbers from 1024 to 49151 (2^10^ to 2^14^ + 2^15^ − 1) are the registered ports. They are assigned by IANA for specific service upon application by a requesting entity. On most systems, registered ports can be used without superuser privileges.
+
+    [List of TCP and UDP port numbers - Wikipedia](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
+
 |                    Name                     | Port(s) | Protocol  |
-| :-----------------------------------------: | :-----: | :-------: |
+| :------------------------------------------ | :-----: | :-------: |
 |             Secure Shell (SSH)              |   22    | TCP & UDP |
 |    Simple Mail Transfer Protocol (SMTP)     |   25    |    TCP    |
 |          Domian Name System (DNS)           |   53    | TCP & UDP |

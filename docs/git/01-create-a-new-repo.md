@@ -1,5 +1,8 @@
-# git
+# Create a New Repo
 
+!!! note "TODO"
+
+<!-- 
 Create repo on github.com
 
 ``` console
@@ -26,4 +29,4 @@ git push -u origin main
 <http://burnedpixel.com/blog/setting-up-git-and-github-on-your-mac/>
 <https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html>
 <https://stackoverflow.com/a/14765857>
-<https://stackoverflow.com/a/41195508>
+<https://stackoverflow.com/a/41195508> -->

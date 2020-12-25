@@ -9,39 +9,41 @@ copyright: Copyright &copy; 2020 Shant Ergenian
 
 theme:
   name: material
+  palette:
+    primary: teal
+  features:
+    - navigation.tabs
+    - navigation.instant
 
 nav:
-  - Food:
-    - Recipes:
-      - recipes/sourdough-starter/recipe.md
-      - recipes/sourdough-bread/recipe.md
-      - recipes/alton-browns-ginger-snaps-cookies/recipe.md
-      - recipes/braised-eggs-with-leek-and-zaatar-aka-green-shakshuka/recipe.md
-      - recipes/braised-eggs-with-beef-smoked-aubergine-and-tomato/recipe.md
-      - recipes/empanadas-con-queso/recipe.md
-  - Code:
-    - Python:
-      - python/01-install-poetry.md
-      - python/02-install-pyenv.md
-      - python/03-create-a-project.md
-      - python/04-setup-vscode.md
-      # - python/05-testing-and-coverage.md
-      - python/06-publish-to-pypi.md
-    - Misc:
-      - misc/npm-commands.md
+  - Python:
+    - python/01-install-poetry.md
+    - python/02-install-pyenv.md
+    - python/03-create-a-project.md
+    - python/04-setup-vscode.md
+    - python/05-testing-and-coverage.md
+    - python/06-publish-to-pypi.md
   - macOS:
-    # - macos/privacy.md
     - macos/restore-applebooks.md
     - macos/export-contacts.md
     - macos/sparsebundles.md
     - macos/references.md
-  - NAS:
-    - nas/01-router.md
-    - nas/02-synology-network.md
-    - nas/03-synology-data.md
-    - nas/04-synology-extras.md
-    - nas/05-how-to.md
-    - nas/06-reference.md
+    # - macos/privacy.md
+  - git:
+    - git/01-create-a-new-repo.md
+  - Synology:
+    - synology/01-router.md
+    - synology/02-network.md
+    - synology/03-data.md
+    - synology/04-extras.md
+    - synology/05-reference.md
+  - Recipes:
+    - recipes/sourdough-starter/index.md
+    - recipes/sourdough-bread/index.md
+    - recipes/alton-browns-ginger-snaps-cookies/index.md
+    - recipes/braised-eggs-with-leek-and-zaatar-aka-green-shakshuka/index.md
+    - recipes/braised-eggs-with-beef-smoked-aubergine-and-tomato/index.md
+    - recipes/empanadas-con-queso/index.md
 
 
 markdown_extensions:
@@ -54,6 +56,7 @@ markdown_extensions:
       toc_depth: 3
   - pymdownx.mark
   - pymdownx.keys
+  - pymdownx.caret
   - pymdownx.details
   - pymdownx.snippets
   - pymdownx.highlight
