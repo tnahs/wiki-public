@@ -63,12 +63,12 @@ $ poetry run pip install --upgrade pip
 $ poetry run pip install --upgrade setuptools
 ```
 
-## Installing dependancies
+## Installing dependencies
 
 Add dev dependencies.
 
 ``` console
-$ poetry add --dev black mypy flake8 pytest coverage
+$ poetry add --dev 
 ```
 
 Add other dependencies.

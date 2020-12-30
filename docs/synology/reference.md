@@ -32,6 +32,8 @@
 
     [List of TCP and UDP port numbers - Wikipedia](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
 
+[What network ports are used by DSM services? | Synology Inc.](https://www.synology.com/en-global/knowledgebase/DSM/tutorial/Network/What_network_ports_are_used_by_Synology_services)
+
 |                    Name                     | Port(s) | Protocol  |
 | :------------------------------------------ | :-----: | :-------: |
 |             Secure Shell (SSH)              |   22    | TCP & UDP |

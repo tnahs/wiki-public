@@ -1,8 +1,8 @@
-# Synology Extras
+# Extras
 
 ## Reset/Re-install DSM
 
-!!! note "TODO"
+!!! note "TODO:MED"
 
 !!! quote
 
@@ -10,16 +10,36 @@
 
     [How to reset my Synology NAS | Synology](https://www.synology.com/en-global/knowledgebase/DSM/tutorial/General_Setup/How_to_reset_my_Synology_NAS)
 
+## Enable SynoCommunity Packages
+
+:octicons-location-24: Where
+
+`Package Center`
+
+:octicons-question-24: How
+
+- Click `Settings`
+    - In the `General` tab
+        - Under `Trust Level`
+            - Select `Synology Inc. and trusted publishers`
+    - In the `Package Sources` tab
+        - Click `Add`
+            1. Set `Name` to `SynoCommunity`
+            2. Set `Location` to `https://packages.synocommunity.com`
+            3. Click `Ok`
+
+A new `Community` tab should now be available in `Package Center`.
+
 ## Docker
 
-!!! note "TODO"
+!!! note "TODO:LOW"
 
 ## Pi-Hole
 
-!!! note "TODO"
+!!! note "TODO:LOW"
 
 ## youtube-dl
 
-!!! note "TODO"
+!!! note "TODO:LOW"
 
 <!-- <https://registry.hub.docker.com/r/tzahi12345/youtubedl-material> -->

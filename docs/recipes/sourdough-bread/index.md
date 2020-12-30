@@ -22,7 +22,7 @@ Yield:   2     Loaves
 
     "Bakers math" tells us that 1000g of total flour and 650g of water equates to a dough with 65% hydration.
 
-    <!-- TODO: Note about protein content and hydration levels. -->
+    <!-- TODO:LOW Note about protein content and hydration levels. -->
 
 ### Proofing/Baking/Tools
 
@@ -41,7 +41,7 @@ Yield:   2     Loaves
 
 ### Preparations
 
-Before preparing the dough, a levain needs to be generated from the sourdough starter. See [Making a Levain](./../sourdough-starter/recipe.md#making-a-levain). This needs to be done about 8 hours in advance, the exact time depending on the ambient room temperature.[^1]
+Before preparing the dough, a levain needs to be generated from the sourdough starter. See [Making a Levain](./../sourdough-starter/index.md#making-a-levain). This needs to be done about 8 hours in advance, the exact time depending on the ambient room temperature.[^1]
 
 The levain can be prepared in the evening and allowed to rise overnight. If timed properly dough-making can start first thing in the morning.
 
@@ -69,7 +69,7 @@ The levain can be prepared in the evening and allowed to rise overnight. If time
 
 [^timer]: The first proofing has begun at this point and it's necessary to keep track of the elapsed time to compare to the table under [Proofing Times](#proofing-times).
 
-[^pre-shaping]: This step is typically done after the first proofing however if done improperly this canccause the dough to deflate. A simple workaround is to split the dough before the first proofing.
+[^pre-shaping]: This step is typically done after the first proofing however if done improperly this can cause the dough to deflate. A simple workaround is to split the dough before the first proofing.
 
 ### Baking the Dough
 

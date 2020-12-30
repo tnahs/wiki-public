@@ -1,4 +1,4 @@
-# Synology Data
+# Data
 
 ## Setup a Data Scrubbing Schedule
 
@@ -75,36 +75,25 @@ Install `Storage Analyzer` from `Package Center`
         2. Under `Retention Policy`
             - Set `Number of days to retain deleted files` to `30`
 
-## Enable Uninterruptible Power Supply Support
-
-:octicons-location-24: Where
-
-`Control Panel` • `Hardware & Power`
-
-:octicons-question-24: How
-
-- In the `UPS` tab
-    - Check `Enable UPS support`
-
 ## Snapshots
 
-!!! note "TODO"
+!!! note "TODO:LOW"
 
 ## Hyper Backup
 
-!!! note "TODO"
+!!! note "TODO:LOW"
 
 ## Synology Drive
 
-!!! note "TODO"
+!!! note "TODO:LOW"
 
 ## Time Machine (macOS)
 
-!!! note "TODO"
+!!! note "TODO:LOW"
 
 ## rsync
 
-!!! note "TODO"
+!!! note "TODO:LOW"
 
 <!-- <https://www.wundertech.net/how-to-backup-a-linux-pc-to-a-synology-nas-using-rsync/> -->
 <!-- <https://www.wundertech.net/use-ssh-keys-to-automatically-backup-a-linux-pc-to-a-synology-nas/> -->

@@ -26,4 +26,4 @@ This is a quick way to get a very comforting meal on the table in a wonderfully 
 2. Use a large spoon to make 6 indentations in the mixture and break one egg into each space. Sprinkle the eggs with a pinch of salt, dot the feta around the eggs, then cover the pan. Simmer for 4–5 minutes, until the egg whites are cooked but the yolks are still runny.
 3. Mix the za’atar with the remaining tablespoon of oil and brush over the eggs. Serve at once, straight from the pan.
 
-![""](Braised-eggs-with-leek-and-zaatar.jpg)
+![""](images/braised-eggs-with-leek-and-zaatar.jpg)

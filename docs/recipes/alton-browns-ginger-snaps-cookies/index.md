@@ -37,6 +37,6 @@ Modifications for a less sweet more cake-like cookie:
 
 ## Photos
 
-![""](./IMG_0322.jpg)
-![""](./IMG_0323.jpg)
-![""](./IMG_0321.jpg)
+![""](./images/IMG_0322.jpg)
+![""](./images/IMG_0323.jpg)
+![""](./images/IMG_0321.jpg)
