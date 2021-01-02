@@ -92,7 +92,7 @@
 
 ## Auto-mount SMB on macOS
 
-!!! note "TODO"
+!!! note "TODO:LOW"
 
 <!-- https://stackoverflow.com/questions/18145509/automount-samba-folder-on-mac -->
 <!-- https://gist.github.com/rudelm/7bcc905ab748ab9879ea -->
@@ -183,10 +183,10 @@ Although this guide has many steps, the two most important ones are setting up t
 
 #### Setup Port Forwarding
 
-| Incoming Port |     Redirect to IP     |    With Port    |       Address Looks Like        |
-| :-----------: | :--------------------: | :-------------: | :-----------------------------: |
-|      80       | 192.168.X.XXX[^nas-ip] | 5000[^dsm-port] | `http://sub-domain.domain.com`  |
-|      443      | 192.168.X.XXX[^nas-ip] | 5001[^dsm-port] | `https://sub-domain.domain.com` |
+|             Address             | Incoming Port |     Redirect to IP     | with Port |
+| :------------------------------ | :-----------: | :--------------------- | :-------: |
+| `http://sub-domain.domain.com`  |      80       | 192.168.X.XXX[^nas-ip] |    80     |
+| `https://sub-domain.domain.com` |      443      | 192.168.X.XXX[^nas-ip] |    443    |
 
 ### Setup Connection via VPN
 
@@ -198,14 +198,13 @@ Although this guide has many steps, the two most important ones are setting up t
 
 #### Setup Port Forwarding
 
-| Incoming Port |     Redirect to IP     | With Port |
+| Incoming Port |     Redirect to IP     | with Port |
 | :-----------: | :--------------------: | :-------: |
 |     1194      | 192.168.X.XXX[^nas-ip] |   1194    |
 
 #### Configure Clients
 
 [^nas-ip]: This is the local Static IP Address of the Synology. If the Synology does not have a Static IP address, please see [Set a Static IP Address](#set-a-static-ip-address).
-[^dsm-port]: This defaults to `5000` for `http` and `5001` for `https`. Make sure these reflect the actual ports if have been changed by following [Change Default DSM Ports](#change-default-dsm-ports)
 
 ## Firewall
 

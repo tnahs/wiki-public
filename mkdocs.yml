@@ -1,15 +1,17 @@
 site_name: Wiki
 site_author: Shant Ergenian
 
-copyright: Copyright &copy; 2020 Shant Ergenian
-
 theme:
   name: material
   palette:
     primary: deep purple
+  font:
+    code: JetBrains Mono
   features:
     - navigation.tabs
     - navigation.instant
+  extra_css:
+    - assets/stylesheets/fonts.css
 
 nav:
   - Python:
@@ -20,9 +22,9 @@ nav:
     - python/testing-and-coverage.md
     - python/publish-to-pypi.md
   - macOS:
-    - macos/misc.md
-    - macos/apple-books.md
+    - macos/apple-books-library.md
     - macos/apple-symbolic-hotkeys.md
+    - macos/misc.md
     - macos/reference.md
   # - git:
     # - git/01-create-a-new-repo.md

@@ -22,6 +22,8 @@
 
 ## Common Network Ports & Protocols
 
+[What network ports are used by DSM services? | Synology Inc.](https://www.synology.com/en-global/knowledgebase/DSM/tutorial/Network/What_network_ports_are_used_by_Synology_services)
+
 !!! quote
 
     The port numbers in the range from 0 to 1023 (0 to 2^10^ − 1) are the well-known ports or system ports. They are used by system processes that provide widely used types of network services. On Unix-like operating systems, a process must execute with superuser privileges to be able to bind a network socket to an IP address using one of the well-known ports.
@@ -32,14 +34,12 @@
 
     [List of TCP and UDP port numbers - Wikipedia](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
 
-[What network ports are used by DSM services? | Synology Inc.](https://www.synology.com/en-global/knowledgebase/DSM/tutorial/Network/What_network_ports_are_used_by_Synology_services)
-
 |                    Name                     | Port(s) | Protocol  |
 | :------------------------------------------ | :-----: | :-------: |
-|             Secure Shell (SSH)              |   22    | TCP & UDP |
-|    Simple Mail Transfer Protocol (SMTP)     |   25    |    TCP    |
-|          Domian Name System (DNS)           |   53    | TCP & UDP |
+| Secure Shell (SSH)                          |   22    | TCP & UDP |
+| Simple Mail Transfer Protocol (SMTP)        |   25    |    TCP    |
+| Domain Name System (DNS)                    |   53    | TCP & UDP |
 | Dynamic Host Configuration Protocol (DHCP)  | 67 / 68 |    UDP    |
-|     Hyper Text Transfer Protocol (HTTP)     |   80    |    TCP    |
+| Hyper Text Transfer Protocol (HTTP)         |   80    |    TCP    |
 | Hyper Text Transfer Protocol Secure (HTTPS) |   443   |    TCP    |
-|         Server Message Block (SMB)          |         |    TCP    |
+| Server Message Block (SMB)                  |   445   |    TCP    |
