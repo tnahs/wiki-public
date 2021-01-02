@@ -36,8 +36,8 @@
       
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CJetBrains+Mono&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"JetBrains Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -171,7 +171,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../macos/misc/" class="md-tabs__link">
+      <a href="../../macos/apple-books-library/" class="md-tabs__link">
         macOS
       </a>
     </li>
@@ -383,21 +383,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../macos/misc/" class="md-nav__link">
-      Misc
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../macos/apple-books/" class="md-nav__link">
-      Apple Books
+    <a href="../../macos/apple-books-library/" class="md-nav__link">
+      Apple Books Library
     </a>
   </li>
 
@@ -411,6 +398,19 @@
   <li class="md-nav__item">
     <a href="../../macos/apple-symbolic-hotkeys/" class="md-nav__link">
       Apple Symbolic Hotkeys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../macos/misc/" class="md-nav__link">
+      Misc
     </a>
   </li>
 
@@ -1063,7 +1063,7 @@
 </ul>
 <h2 id="auto-mount-smb-on-macos">Auto-mount SMB on macOS<a class="headerlink" href="#auto-mount-smb-on-macos" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
-<p class="admonition-title">TODO</p>
+<p class="admonition-title">TODO:LOW</p>
 </div>
 <!-- https://stackoverflow.com/questions/18145509/automount-samba-folder-on-mac -->
 <!-- https://gist.github.com/rudelm/7bcc905ab748ab9879ea -->
@@ -1126,24 +1126,24 @@
 <table>
 <thead>
 <tr>
+<th align="left">Address</th>
 <th align="center">Incoming Port</th>
-<th align="center">Redirect to IP</th>
-<th align="center">With Port</th>
-<th align="center">Address Looks Like</th>
+<th align="left">Redirect to IP</th>
+<th align="center">with Port</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td align="left"><code>http://sub-domain.domain.com</code></td>
 <td align="center">80</td>
-<td align="center">192.168.X.XXX<sup id="fnref3:nas-ip"><a class="footnote-ref" href="#fn:nas-ip">3</a></sup></td>
-<td align="center">5000<sup id="fnref2:dsm-port"><a class="footnote-ref" href="#fn:dsm-port">4</a></sup></td>
-<td align="center"><code>http://sub-domain.domain.com</code></td>
+<td align="left">192.168.X.XXX<sup id="fnref3:nas-ip"><a class="footnote-ref" href="#fn:nas-ip">3</a></sup></td>
+<td align="center">80</td>
 </tr>
 <tr>
+<td align="left"><code>https://sub-domain.domain.com</code></td>
 <td align="center">443</td>
-<td align="center">192.168.X.XXX<sup id="fnref2:nas-ip"><a class="footnote-ref" href="#fn:nas-ip">3</a></sup></td>
-<td align="center">5001<sup id="fnref:dsm-port"><a class="footnote-ref" href="#fn:dsm-port">4</a></sup></td>
-<td align="center"><code>https://sub-domain.domain.com</code></td>
+<td align="left">192.168.X.XXX<sup id="fnref2:nas-ip"><a class="footnote-ref" href="#fn:nas-ip">3</a></sup></td>
+<td align="center">443</td>
 </tr>
 </tbody>
 </table>
@@ -1158,7 +1158,7 @@
 <tr>
 <th align="center">Incoming Port</th>
 <th align="center">Redirect to IP</th>
-<th align="center">With Port</th>
+<th align="center">with Port</th>
 </tr>
 </thead>
 <tbody>
@@ -1250,9 +1250,6 @@
 <li id="fn:nas-ip">
 <p>This is the local Static IP Address of the Synology. If the Synology does not have a Static IP address, please see <a href="#set-a-static-ip-address">Set a Static IP Address</a>.&#160;<a class="footnote-backref" href="#fnref:nas-ip" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:nas-ip" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:nas-ip" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
-<li id="fn:dsm-port">
-<p>This defaults to <code>5000</code> for <code>http</code> and <code>5001</code> for <code>https</code>. Make sure these reflect the actual ports if have been changed by following <a href="#change-default-dsm-ports">Change Default DSM Ports</a>&#160;<a class="footnote-backref" href="#fnref:dsm-port" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:dsm-port" title="Jump back to footnote 4 in the text">&#8617;</a></p>
-</li>
 </ol>
 </div>
                 
@@ -1308,10 +1305,6 @@
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2020 Shant Ergenian
-          </div>
         
         Made with
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">

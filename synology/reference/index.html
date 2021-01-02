@@ -36,8 +36,8 @@
       
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CJetBrains+Mono&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"JetBrains Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -171,7 +171,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../macos/misc/" class="md-tabs__link">
+      <a href="../../macos/apple-books-library/" class="md-tabs__link">
         macOS
       </a>
     </li>
@@ -383,21 +383,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../macos/misc/" class="md-nav__link">
-      Misc
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../../macos/apple-books/" class="md-nav__link">
-      Apple Books
+    <a href="../../macos/apple-books-library/" class="md-nav__link">
+      Apple Books Library
     </a>
   </li>
 
@@ -411,6 +398,19 @@
   <li class="md-nav__item">
     <a href="../../macos/apple-symbolic-hotkeys/" class="md-nav__link">
       Apple Symbolic Hotkeys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../macos/misc/" class="md-nav__link">
+      Misc
     </a>
   </li>
 
@@ -736,6 +736,7 @@
 <p><a href="https://www.cloudflare.com/learning/ddos/glossary/user-datagram-protocol-udp/">What is UDP? - Cloudflare</a></p>
 </div>
 <h2 id="common-network-ports-protocols">Common Network Ports &amp; Protocols<a class="headerlink" href="#common-network-ports-protocols" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.synology.com/en-global/knowledgebase/DSM/tutorial/Network/What_network_ports_are_used_by_Synology_services">What network ports are used by DSM services? | Synology Inc.</a></p>
 <div class="admonition quote">
 <p class="admonition-title">Quote</p>
 <p>The port numbers in the range from 0 to 1023 (0 to 2<sup>10</sup> − 1) are the well-known ports or system ports. They are used by system processes that provide widely used types of network services. On Unix-like operating systems, a process must execute with superuser privileges to be able to bind a network socket to an IP address using one of the well-known ports.</p>
@@ -743,7 +744,6 @@
 <p>The range of port numbers from 1024 to 49151 (2<sup>10</sup> to 2<sup>14</sup> + 2<sup>15</sup> − 1) are the registered ports. They are assigned by IANA for specific service upon application by a requesting entity. On most systems, registered ports can be used without superuser privileges.</p>
 <p><a href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers">List of TCP and UDP port numbers - Wikipedia</a></p>
 </div>
-<p><a href="https://www.synology.com/en-global/knowledgebase/DSM/tutorial/Network/What_network_ports_are_used_by_Synology_services">What network ports are used by DSM services? | Synology Inc.</a></p>
 <table>
 <thead>
 <tr>
@@ -764,7 +764,7 @@
 <td align="center">TCP</td>
 </tr>
 <tr>
-<td align="left">Domian Name System (DNS)</td>
+<td align="left">Domain Name System (DNS)</td>
 <td align="center">53</td>
 <td align="center">TCP &amp; UDP</td>
 </tr>
@@ -785,7 +785,7 @@
 </tr>
 <tr>
 <td align="left">Server Message Block (SMB)</td>
-<td align="center"></td>
+<td align="center">445</td>
 <td align="center">TCP</td>
 </tr>
 </tbody>
@@ -843,10 +843,6 @@
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2020 Shant Ergenian
-          </div>
         
         Made with
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">

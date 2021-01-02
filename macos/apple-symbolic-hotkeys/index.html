@@ -36,8 +36,8 @@
       
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CJetBrains+Mono&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"JetBrains Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -173,7 +173,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../misc/" class="md-tabs__link md-tabs__link--active">
+      <a href="../apple-books-library/" class="md-tabs__link md-tabs__link--active">
         macOS
       </a>
     </li>
@@ -385,21 +385,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../misc/" class="md-nav__link">
-      Misc
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../apple-books/" class="md-nav__link">
-      Apple Books
+    <a href="../apple-books-library/" class="md-nav__link">
+      Apple Books Library
     </a>
   </li>
 
@@ -442,22 +429,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applesymbolichotkeys-structure" class="md-nav__link">
-    AppleSymbolicHotKeys Structure
+  <a href="#structure" class="md-nav__link">
+    Structure
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#applesymbolichotkeys-values" class="md-nav__link">
-    AppleSymbolicHotKeys Values
+  <a href="#definition" class="md-nav__link">
+    Definition
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#base-values-for-actionvalueparameters2" class="md-nav__link">
-    Base values for 'action:value:parameters:2'
+  <a href="#key-codes" class="md-nav__link">
+    Key Codes
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characters" class="md-nav__link">
+    Characters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifiers" class="md-nav__link">
+    Modifiers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-using-plistbuddy" class="md-nav__link">
+    Edit Using PlistBuddy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keys-reference" class="md-nav__link">
+    Keys Reference
   </a>
   
 </li>
@@ -473,6 +494,19 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../misc/" class="md-nav__link">
+      Misc
+    </a>
   </li>
 
         
@@ -694,22 +728,56 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#applesymbolichotkeys-structure" class="md-nav__link">
-    AppleSymbolicHotKeys Structure
+  <a href="#structure" class="md-nav__link">
+    Structure
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#applesymbolichotkeys-values" class="md-nav__link">
-    AppleSymbolicHotKeys Values
+  <a href="#definition" class="md-nav__link">
+    Definition
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#base-values-for-actionvalueparameters2" class="md-nav__link">
-    Base values for 'action:value:parameters:2'
+  <a href="#key-codes" class="md-nav__link">
+    Key Codes
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Codes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#characters" class="md-nav__link">
+    Characters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifiers" class="md-nav__link">
+    Modifiers
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edit-using-plistbuddy" class="md-nav__link">
+    Edit Using PlistBuddy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keys-reference" class="md-nav__link">
+    Keys Reference
   </a>
   
 </li>
@@ -735,124 +803,829 @@
                 
                 
                 <h1 id="apple-symbolic-hotkeys">Apple Symbolic Hotkeys<a class="headerlink" href="#apple-symbolic-hotkeys" title="Permanent link">&para;</a></h1>
-<h2 id="applesymbolichotkeys-structure">AppleSymbolicHotKeys Structure<a class="headerlink" href="#applesymbolichotkeys-structure" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>&lt;action:int&gt; = Dict {
-    enabled = &lt;enabled:bool&gt;
-    value = Dict {
-        type = &lt;type:string&gt;
-        parameters = Array {
-            &lt;0:int&gt;
-            &lt;1:int&gt;
-            &lt;2:int&gt;
-        }
+<p>The default macOS hotkeys found in <code>System Preferences</code> &gt; <code>Keyboard</code> are located in the <code>com.apple.symbolichotkeys.plist</code> inside <code>~/Library/Preferences</code>.</p>
+<h2 id="structure">Structure<a class="headerlink" href="#structure" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>{
+    AppleSymbolicHotKeys = {
+
+        &lt;action:int&gt; = Dict {
+            enabled = &lt;enabled:bool&gt;
+            value = Dict {
+                type = &lt;type:string&gt;
+                parameters = Array {
+                    &lt;0:int&gt;
+                    &lt;1:int&gt;
+                    &lt;2:int&gt;
+                }
+            }
+        },
+
+        ...
+
     }
 }
 </code></pre></div>
-<h2 id="applesymbolichotkeys-values">AppleSymbolicHotKeys Values<a class="headerlink" href="#applesymbolichotkeys-values" title="Permanent link">&para;</a></h2>
+<h2 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>action: The ID of action the hotkey will take.
-   enabled: Toggle enabled/disabled.
-   type: Always seems to be &#39;standard&#39;.
-   parameters:
-     0: The ASCII code of the character or &#39;65535&#39; for non-ASCII characters.
-     1: AppleScript key code for the character.
-     2: The summed value of the modifier keys. See below.
+    enabled: Toggle enabled/disabled.
+    value:
+        type: Always seems to be &#39;standard&#39;...
+        parameters:
+            0: ASCII code of the character or &#39;65535&#39; for non-ASCII characters.
+            1: AppleScript key code for the character.
+            2: Summed value of the modifier keys.*
 </code></pre></div>
-<h2 id="base-values-for-actionvalueparameters2">Base values for &lsquo;action:value:parameters:2&rsquo;<a class="headerlink" href="#base-values-for-actionvalueparameters2" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>         0 -&gt; None
-    131072 -&gt; Shift
-     26214 -&gt; Control
-    524288 -&gt; Option
-   1048576 -&gt; Command
-
- Sum integers for key combinations. For example:
-
-   Command+Shift == 1048576+131072 == 1179648
+<p>* See <a href="#modifiers">Modifiers</a>.</p>
+<h2 id="key-codes">Key Codes<a class="headerlink" href="#key-codes" title="Permanent link">&para;</a></h2>
+<h3 id="characters">Characters<a class="headerlink" href="#characters" title="Permanent link">&para;</a></h3>
+<p>Use an application like <a href="https://manytricks.com/keycodes/">KeyCodes</a> to retrieve character key codes for <code>action:value:parameters:0</code> and <code>action:value:parameters:1</code>.</p>
+<h3 id="modifiers">Modifiers<a class="headerlink" href="#modifiers" title="Permanent link">&para;</a></h3>
+<p>Modifier key codes for <code>action:value:parameters:2</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Control</td>
+<td>26214</td>
+</tr>
+<tr>
+<td>Option</td>
+<td>524288</td>
+</tr>
+<tr>
+<td>Shift</td>
+<td>131072</td>
+</tr>
+<tr>
+<td>Command</td>
+<td>1048576</td>
+</tr>
+<tr>
+<td>None</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>With key combinations being the sum of their respective codes. For example:</p>
+<div class="highlight"><pre><span></span><code>Command + Shift -&gt; 1048576 + 131072 -&gt; 1179648
 </code></pre></div>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<p><a href="https://stackoverflow.com/q/21878482">https://stackoverflow.com/q/21878482</a>
-<a href="https://krypted.com/mac-os-x/defaults-symbolichotkeys/">https://krypted.com/mac-os-x/defaults-symbolichotkeys/</a>
-<a href="https://web.archive.org/web/20141112224103/http://hintsforums.macworld.com/showthread.php?t=114785">https://web.archive.org/web/20141112224103/http://hintsforums.macworld.com/showthread.php?t=114785</a></p>
+<h2 id="edit-using-plistbuddy">Edit Using PlistBuddy<a class="headerlink" href="#edit-using-plistbuddy" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="nv">HOTKEYS_PLIST</span><span class="o">=</span><span class="nv">$HOME</span>/Library/Preferences/com.apple.symbolichotkeys.plist
+
+<span class="c1"># Move right a space - Command+Shift+D</span>
+/usr/libexec/PlistBuddy -c <span class="s2">&quot;Set :AppleSymbolicHotKeys:79:enabled true&quot;</span> <span class="nv">$HOTKEYS_PLIST</span>
+/usr/libexec/PlistBuddy -c <span class="s2">&quot;Set :AppleSymbolicHotKeys:79:value:parameters:0 97&quot;</span> <span class="nv">$HOTKEYS_PLIST</span>
+/usr/libexec/PlistBuddy -c <span class="s2">&quot;Set :AppleSymbolicHotKeys:79:value:parameters:1 0&quot;</span> <span class="nv">$HOTKEYS_PLIST</span>
+/usr/libexec/PlistBuddy -c <span class="s2">&quot;Set :AppleSymbolicHotKeys:79:value:parameters:2 1179648&quot;</span> <span class="nv">$HOTKEYS_PLIST</span>
+</code></pre></div>
+<h2 id="keys-reference">Keys Reference<a class="headerlink" href="#keys-reference" title="Permanent link">&para;</a></h2>
+<p>Taken from <a href="https://web.archive.org/web/20141112224103/http://hintsforums.macworld.com/showthread.php?t=114785">Documenting com.apple.symbolichotkeys.plist</a> dated 11-09-2010.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="n">AppleSymbolicHotKeys</span> <span class="p">=</span> <span class="p">{</span>
+
+        <span class="c1">// Move focus to the menu bar - Control, F2</span>
+        <span class="mi">7</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">120</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Move focus to the Dock - Control, F3</span>
+        <span class="mi">8</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">99</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Move focus to active or next window - Control, F4</span>
+        <span class="mi">9</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">118</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Move focus to window toolbar - Control, F5</span>
+        <span class="mi">10</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">96</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Move focus to floating window - Control, F6</span>
+        <span class="mi">11</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">97</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// ??? - Control, F1</span>
+        <span class="mi">12</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">122</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Change the way Tab moves focus - Control, F7</span>
+        <span class="mi">13</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">98</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Turn zoom on or off - Command, Option, 8</span>
+        <span class="mi">15</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">56</span><span class="p">,</span>
+                    <span class="mi">28</span><span class="p">,</span>
+                    <span class="mi">1572864</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Zoom in - Command, Option, =</span>
+        <span class="mi">17</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">61</span><span class="p">,</span>
+                    <span class="mi">24</span><span class="p">,</span>
+                    <span class="mi">1572864</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Zoom out - Command, Option, -</span>
+        <span class="mi">19</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">45</span><span class="p">,</span>
+                    <span class="mi">27</span><span class="p">,</span>
+                    <span class="mi">1572864</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Reverse Black and White - Command, Control, Option, 8</span>
+        <span class="mi">21</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">56</span><span class="p">,</span>
+                    <span class="mi">28</span><span class="p">,</span>
+                    <span class="mi">1835008</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Turn image smoothing on or off - Command, Option, \</span>
+        <span class="mi">23</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">92</span><span class="p">,</span>
+                    <span class="mi">42</span><span class="p">,</span>
+                    <span class="mi">1572864</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Increase Contrast - Command, Control, Option, .</span>
+        <span class="mi">25</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">46</span><span class="p">,</span>
+                    <span class="mi">47</span><span class="p">,</span>
+                    <span class="mi">1835008</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Decrease Contrast - Command, Control, Option, &#39;,&#39;</span>
+        <span class="mi">26</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">44</span><span class="p">,</span>
+                    <span class="mi">43</span><span class="p">,</span>
+                    <span class="mi">1835008</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Move focus to the next window in application - Command, backtic</span>
+        <span class="mi">27</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">96</span><span class="p">,</span>
+                    <span class="mi">50</span><span class="p">,</span>
+                    <span class="mi">1048576</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Save picture of screen as file - Command, Shift, 3</span>
+        <span class="mi">28</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">51</span><span class="p">,</span>
+                    <span class="mi">20</span><span class="p">,</span>
+                    <span class="mi">1179648</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Copy picture of screen to clipboard - Command, Control, Shift, 3</span>
+        <span class="mi">29</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">51</span><span class="p">,</span>
+                    <span class="mi">20</span><span class="p">,</span>
+                    <span class="mi">1441792</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Save picture of selected area as file - Command, Shift, 4</span>
+        <span class="mi">30</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">52</span><span class="p">,</span>
+                    <span class="mi">21</span><span class="p">,</span>
+                    <span class="mi">1179648</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Copy picture of selected area to clipboard - Command, Control, Shift, 4</span>
+        <span class="mi">31</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">52</span><span class="p">,</span>
+                    <span class="mi">21</span><span class="p">,</span>
+                    <span class="mi">1441792</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// All Windows - F9</span>
+        <span class="mi">32</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">101</span><span class="p">,</span>
+                    <span class="mi">0</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Application Windows - F10</span>
+        <span class="mi">33</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">109</span><span class="p">,</span>
+                    <span class="mi">0</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// All Windows (Slow) - F9</span>
+        <span class="mi">34</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">101</span><span class="p">,</span>
+                    <span class="mi">131072</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Application Windows (Slow) - F10</span>
+        <span class="mi">35</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">109</span><span class="p">,</span>
+                    <span class="mi">131072</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Desktop - F11</span>
+        <span class="mi">36</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">103</span><span class="p">,</span>
+                    <span class="mi">0</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Desktop (Slow) - F11</span>
+        <span class="mi">37</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">103</span><span class="p">,</span>
+                    <span class="mi">131072</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// ??? - Command, Option, T</span>
+        <span class="mi">50</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">116</span><span class="p">,</span>
+                    <span class="mi">17</span><span class="p">,</span>
+                    <span class="mi">1572864</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Move focus to the window drawer - Command, Option, quote</span>
+        <span class="mi">51</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">39</span><span class="p">,</span>
+                    <span class="mi">50</span><span class="p">,</span>
+                    <span class="mi">1572864</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Turn Dock Hiding On/Off - Command, Option, D</span>
+        <span class="mi">52</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">100</span><span class="p">,</span>
+                    <span class="mi">2</span><span class="p">,</span>
+                    <span class="mi">1572864</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// ??? - F14</span>
+        <span class="mi">53</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">107</span><span class="p">,</span>
+                    <span class="mi">0</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// ??? - F15</span>
+        <span class="mi">54</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">113</span><span class="p">,</span>
+                    <span class="mi">0</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// ??? - Option, F14</span>
+        <span class="mi">55</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">107</span><span class="p">,</span>
+                    <span class="mi">524288</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// ??? - Option, F15</span>
+        <span class="mi">56</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">113</span><span class="p">,</span>
+                    <span class="mi">524288</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Move focus to the status menus - Control, F8</span>
+        <span class="mi">57</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">100</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Turn VoiceOver on / off - Command, F5</span>
+        <span class="mi">59</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">96</span><span class="p">,</span>
+                    <span class="mi">1048576</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Select the previous input source - Command, Option, Space</span>
+        <span class="mi">60</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">32</span><span class="p">,</span>
+                    <span class="mi">49</span><span class="p">,</span>
+                    <span class="mi">1572864</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Select the next source in the Input Menu - Command, Option, Shift, Space</span>
+        <span class="mi">61</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">32</span><span class="p">,</span>
+                    <span class="mi">49</span><span class="p">,</span>
+                    <span class="mi">1703936</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Dashboard - F12</span>
+        <span class="mi">62</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">111</span><span class="p">,</span>
+                    <span class="mi">0</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Dashboard (Slow) - F12</span>
+        <span class="mi">63</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">111</span><span class="p">,</span>
+                    <span class="mi">131072</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Show Spotlight search field - Command, Shift, Space</span>
+        <span class="mi">64</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">49</span><span class="p">,</span>
+                    <span class="mi">1179648</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Show Spotlight window - Control, Shift, Space</span>
+        <span class="mi">65</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">49</span><span class="p">,</span>
+                    <span class="mi">393216</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Dictionary MouseOver - Command, Shift, E</span>
+        <span class="mi">70</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">101</span><span class="p">,</span>
+                    <span class="mi">2</span><span class="p">,</span>
+                    <span class="mi">1179648</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Hide and show Front Row - Command, Esc</span>
+        <span class="mi">73</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">53</span><span class="p">,</span>
+                    <span class="mi">1048576</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Activate Spaces - F8</span>
+        <span class="mi">75</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">100</span><span class="p">,</span>
+                    <span class="mi">0</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Activate Spaces (Slow) - Shift, F8</span>
+        <span class="mi">76</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">100</span><span class="p">,</span>
+                    <span class="mi">131072</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Spaces Left - Control, Left</span>
+        <span class="mi">79</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">123</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Spaces Right - Control, Right</span>
+        <span class="mi">81</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">124</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Spaces Down - Control, Down</span>
+        <span class="mi">83</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">125</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Spaces Up - Control, Up</span>
+        <span class="mi">85</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">126</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Show Help Menu - Command, Shift, /</span>
+        <span class="mi">91</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">92</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">98</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">47</span><span class="p">,</span>
+                    <span class="mi">44</span><span class="p">,</span>
+                    <span class="mi">1179648</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Switch to Space 1 - Control, 1</span>
+        <span class="mi">118</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">18</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Switch to Space 2 - Control, 2</span>
+        <span class="mi">119</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">19</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Switch to Space 3 - Control, 3</span>
+        <span class="mi">120</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">20</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="c1">// Switch to Space 4 - Control, 4</span>
+        <span class="mi">121</span> <span class="p">=</span> <span class="p">{</span>
+            <span class="n">enabled</span> <span class="p">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">value</span> <span class="p">=</span> <span class="p">{</span>
+                <span class="n">parameters</span> <span class="p">=</span> <span class="p">(</span>
+                    <span class="mi">65535</span><span class="p">,</span>
+                    <span class="mi">21</span><span class="p">,</span>
+                    <span class="mi">262144</span>
+                <span class="p">);</span>
+                <span class="n">type</span> <span class="p">=</span> <span class="n">standard</span><span class="p">;</span>
+            <span class="p">};</span>
+        <span class="p">};</span>
+
+        <span class="mi">122</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">123</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">124</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">125</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">126</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">127</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">128</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">129</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">130</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">131</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">132</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">133</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">134</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">135</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">136</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">137</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">138</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">139</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">140</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">141</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">142</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">143</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">144</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">145</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">146</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">147</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">148</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+        <span class="mi">149</span> <span class="p">=</span> <span class="p">{</span> <span class="n">enabled</span> <span class="p">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">};</span>
+    <span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div>
 <!--
+# 71 Cycle through active applications - middle mouse button
+defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 71 '{ enabled = 0; value = { parameters = (
+    4,
+    4,
+    0
+); type = button; }; }'
 
-Save picture of screen as a file - Command+Shift+3
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:28:enabled true" $HOTKEYS_PLIST
-
-Save picture of selected area as a file - Command+Shift+4
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:30:enabled true" $HOTKEYS_PLIST
-
-Screenshot and recording options - Command+Shift+5
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:184:enabled true" $HOTKEYS_PLIST
-
-Move right a space - Command+Shift+D
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:79:enabled true" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:79:value:parameters:0 97" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:79:value:parameters:1 0" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:79:value:parameters:2 1179648" $HOTKEYS_PLIST
-
-Move left a space - Command+Shift+A
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:81:enabled true" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:81:value:parameters:0 100" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:81:value:parameters:1 2" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:81:value:parameters:2 1179648" $HOTKEYS_PLIST
-
-Switch to Desktop 1 - Command+1
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:118:enabled true" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:118:value:parameters:0 49" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:118:value:parameters:1 18" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:118:value:parameters:2 1048576" $HOTKEYS_PLIST
-
-Switch to Desktop 2 - Command+2
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:119:enabled true" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:119:value:parameters:0 50" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:119:value:parameters:1 19" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:119:value:parameters:2 1048576" $HOTKEYS_PLIST
-
-Switch to Desktop 3 - Command+3
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:120:enabled true" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:120:value:parameters:0 51" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:120:value:parameters:1 20" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:120:value:parameters:2 1048576" $HOTKEYS_PLIST
-
-Switch to Desktop 4 - Command+4
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:121:enabled true" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:121:value:parameters:0 52" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:121:value:parameters:1 21" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:121:value:parameters:2 1048576" $HOTKEYS_PLIST
-
-Switch to Desktop 5 - Command+5
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:122:enabled true" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:122:value:parameters:0 53" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:122:value:parameters:1 22" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:122:value:parameters:2 1048576" $HOTKEYS_PLIST
-
-Switch to Desktop 6 - Command+6
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:123:enabled true" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:123:value:parameters:0 54" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:123:value:parameters:1 23" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:123:value:parameters:2 1048576" $HOTKEYS_PLIST
-
-Switch to Desktop 7 - Command+7
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:124:enabled true" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:124:value:parameters:0 55" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:124:value:parameters:1 24" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:124:value:parameters:2 1048576" $HOTKEYS_PLIST
-
-Switch to Desktop 8 - Command+8
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:125:enabled true" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:125:value:parameters:0 56" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:125:value:parameters:1 25" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:125:value:parameters:2 1048576" $HOTKEYS_PLIST
-
-Switch to Desktop 9 - Command+9
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:126:enabled true" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:126:value:parameters:0 57" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:126:value:parameters:1 26" $HOTKEYS_PLIST
-/usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:126:value:parameters:2 1048576" $HOTKEYS_PLIST
-
-/usr/libexec/PlistBuddy -c "Print :AppleSymbolicHotKeys" $HOTKEYS_PLIST
-
------------------------------------------------------------------------------
+As you see, 'type' is not always 'standard'.
 -->
+
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://stackoverflow.com/q/21878482">What do the parameter values in AppleSymbolicHotKeys plist dict represent?</a></li>
+<li><a href="https://krypted.com/mac-os-x/defaults-symbolichotkeys/">Defaults &amp; symbolichotkeys in Mac OS X</a></li>
+</ul>
                 
               
               
@@ -871,7 +1644,7 @@ Switch to Desktop 9 - Command+9
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../apple-books/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../apple-books-library/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -880,19 +1653,19 @@ Switch to Desktop 9 - Command+9
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Apple Books
+                Apple Books Library
               </div>
             </div>
           </a>
         
         
-          <a href="../reference/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../misc/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                References
+                Misc
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -906,10 +1679,6 @@ Switch to Desktop 9 - Command+9
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2020 Shant Ergenian
-          </div>
         
         Made with
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">

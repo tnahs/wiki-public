@@ -36,8 +36,8 @@
       
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CJetBrains+Mono&display=fallback">
+        <style>body,input{font-family:"",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"JetBrains Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
       
     
     
@@ -173,7 +173,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../apple-books-library/" class="md-tabs__link md-tabs__link--active">
         macOS
       </a>
     </li>
@@ -383,6 +383,32 @@
           
 
 
+
+  <li class="md-nav__item">
+    <a href="../apple-books-library/" class="md-nav__link">
+      Apple Books Library
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../apple-symbolic-hotkeys/" class="md-nav__link">
+      Apple Symbolic Hotkeys
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
   
 
 
@@ -420,18 +446,38 @@
     Run sudo Commands Without a Password
   </a>
   
+    <nav class="md-nav" aria-label="Run sudo Commands Without a Password">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-rules" class="md-nav__link">
+    Adding Rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#command-line-tools" class="md-nav__link">
-    Command Line Tools
+  <a href="#get-command-line-tools-version" class="md-nav__link">
+    Get Command Line Tools Version
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sparsebundles" class="md-nav__link">
-    Sparsebundles
+  <a href="#resize-sparsebundles" class="md-nav__link">
+    Resize Sparsebundles
   </a>
   
 </li>
@@ -454,32 +500,6 @@
   
 </nav>
     
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../apple-books/" class="md-nav__link">
-      Apple Books
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../apple-symbolic-hotkeys/" class="md-nav__link">
-      Apple Symbolic Hotkeys
-    </a>
   </li>
 
         
@@ -705,18 +725,38 @@
     Run sudo Commands Without a Password
   </a>
   
+    <nav class="md-nav" aria-label="Run sudo Commands Without a Password">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adding-rules" class="md-nav__link">
+    Adding Rules
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#command-line-tools" class="md-nav__link">
-    Command Line Tools
+  <a href="#get-command-line-tools-version" class="md-nav__link">
+    Get Command Line Tools Version
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sparsebundles" class="md-nav__link">
-    Sparsebundles
+  <a href="#resize-sparsebundles" class="md-nav__link">
+    Resize Sparsebundles
   </a>
   
 </li>
@@ -750,22 +790,56 @@
                 
                 <h1 id="misc">Misc<a class="headerlink" href="#misc" title="Permanent link">&para;</a></h1>
 <h2 id="run-sudo-commands-without-a-password">Run <code>sudo</code> Commands Without a Password<a class="headerlink" href="#run-sudo-commands-without-a-password" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">WIP:HIGH</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p><code>sudo</code> rules can be added directly to <code>/etc/sudoers</code> or to a file placed in <code>/etc/sudoers.d</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$</span> sudo cat /etc/sudoers.d
+</code></pre></div>
+<div class="highlight"><pre><span></span><code># /etc/sudoers.d
+
+# ...
+
+<span class="hll">## Read drop-in files from /private/etc/sudoers.d
+</span>## (the &#39;#&#39; here does not indicate a comment)
+#includedir /private/etc/sudoers.d
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The <code>#includedir</code> directive can be used to create a <code>sudo.d</code> directory that the system package manager can drop sudoers rules into as part of package installation.  For example, given:</p>
+<p><div class="highlight"><pre><span></span><code>#includedir /etc/sudoers.d
+</code></pre></div>
+<strong>sudo</strong> will read each file in <code>/etc/sudoers.d</code>, skipping file names that end in ~ or contain a . character to avoid causing problems with package manager or editor temporary/backup files.  Files are parsed in sorted lexical order.  That is, <code>/etc/sudoers.d/01_first</code> will be parsed before <code>/etc/sudoers.d/10_second</code>. Be aware that because the sorting is lexical, not numeric, <code>/etc/sudoers.d/1_whoops</code> would be loaded <strong>after</strong> <code>/etc/sudoers.d/10_second</code>. Using a consistent number of leading zeroes in the file names can be used to avoid such problems.</p>
+<p><a href="https://manpages.ubuntu.com/manpages/precise/en/man5/sudoers.5.html">Ubuntu Manpage: sudoers - default sudo security policy module</a></p>
 </div>
-<div class="highlight"><pre><span></span><code><span class="gp">$</span> sudo visudo
+<h3 id="adding-rules">Adding Rules<a class="headerlink" href="#adding-rules" title="Permanent link">&para;</a></h3>
+<p>Create and edit a new file with <code>visudo</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$</span> sudo visudo -f /etc/sudoers.d/usercmds
 </code></pre></div>
-<p>Where <code>user</code> is the user to and <code>/path/to/executable --args</code> is the exact command to execute.</p>
-<div class="highlight"><pre><span></span><code>/etc/sudoers
-
-...
-
-root             ALL = (ALL) ALL
-<span class="hll">user ALL=(ALL) NOPASSWD:/path/to/executable --args
-</span>%admin           ALL = (ALL) ALL
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code>sudoers</code> file should <strong>always</strong> be edited by the <strong>visudo</strong> command which locks the file and does grammatical checking. It is imperative that <code>sudoers</code> be free of syntax errors since <strong>sudo</strong> will not run with a syntactically incorrect <code>sudoers</code> file.</p>
+<p><a href="https://manpages.ubuntu.com/manpages/precise/en/man5/sudoers.5.html">Ubuntu Manpage: sudoers - default sudo security policy module</a></p>
+</div>
+<p>Add <strong>sudo</strong> rules using the following format:</p>
+<div class="highlight"><pre><span></span><code>[USER]   ALL = (ALL) NOPASSWD: [COMMAND, ...]
 </code></pre></div>
+<p>Replacing <code>[USER]</code> with the using being granted permission and <code>[COMMAND, ...]</code> with a list of comma separated commands using absolute paths e.g.:</p>
+<div class="highlight"><pre><span></span><code># /etc/sudoers.d/usercmds
+
+user-a ALL = (ALL) NOPASSWD: /bin/usercmd-a
+user-b ALL = (ALL) NOPASSWD: /bin/usercmd-b, /bin/usercmd-b2 --flag
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">More Info</p>
+<p>By default, <strong>sudo</strong> requires that a user authenticate him or herself before running a command. This behavior can be modified via the NOPASSWD tag. Like a Runas_Spec, the NOPASSWD tag sets a default for the commands that follow it in the Cmnd_Spec_List. Conversely, the PASSWD tag can be used to reverse things. For example:</p>
+<div class="highlight"><pre><span></span><code>ray rushmore = NOPASSWD: /bin/kill, /bin/ls, /usr/bin/lprm
+</code></pre></div>
+<p>would allow the user <strong>ray</strong> to run <code>/bin/kill</code>, <code>/bin/ls</code>, and <code>/usr/bin/lprm</code> as <strong>root</strong> on the machine rushmore without authenticating himself. If we only want <strong>ray</strong> to be able to run <code>/bin/kill</code> without a password the entry would be:</p>
+<p><div class="highlight"><pre><span></span><code>ray rushmore = NOPASSWD: /bin/kill, PASSWD: /bin/ls, /usr/bin/lprm
+</code></pre></div>
+<a href="https://manpages.ubuntu.com/manpages/precise/en/man5/sudoers.5.html">Ubuntu Manpage: sudoers - default sudo security policy module</a></p>
+</div>
 <p>via <a href="https://askubuntu.com/a/159009">How do I run specific sudo commands without a password?</a></p>
-<h2 id="command-line-tools">Command Line Tools<a class="headerlink" href="#command-line-tools" title="Permanent link">&para;</a></h2>
+<h2 id="get-command-line-tools-version">Get Command Line Tools Version<a class="headerlink" href="#get-command-line-tools-version" title="Permanent link">&para;</a></h2>
 <p>Run the following command to see the version of CLT:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$</span> xcode-select --version
 <span class="go">xcode-select version 2384</span>
@@ -778,25 +852,26 @@ root             ALL = (ALL) ALL
 <span class="go">install-time: 1608921954</span>
 <span class="go">groups: com.apple.FindSystemFiles.pkg-group</span>
 </code></pre></div>
-<h2 id="sparsebundles">Sparsebundles<a class="headerlink" href="#sparsebundles" title="Permanent link">&para;</a></h2>
-<p>A Sparse Bundle Image will increase in size automatically but will not shrink automatically.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Before shrinking the sparse bundle, mount it and empty the trash to get rid of any deleted items from the image.</p>
-</div>
-<p>To compact the image, un-mount it and run:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$</span> hdiutil compact path/to/file.sparsebundle
+<h2 id="resize-sparsebundles">Resize Sparsebundles<a class="headerlink" href="#resize-sparsebundles" title="Permanent link">&para;</a></h2>
+<p>To compact the image, empty the trash, un-mount it and run:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$</span> hdiutil compact <span class="o">[</span>PATH_TO_SPARSEBUNDLE<span class="o">]</span>
 </code></pre></div>
 <p>To increase the image, un-mount it and run:</p>
-<div class="highlight"><pre><span></span><code><span class="gp">$</span> hdiutil resize -size <span class="o">[</span>size<span class="o">]</span> path/to/file.sparsebundle
+<div class="highlight"><pre><span></span><code><span class="gp">$</span> hdiutil resize -size <span class="o">[</span>SIZE<span class="o">]</span> <span class="o">[</span>PATH_TO_SPARSEBUNDLE<span class="o">]</span>
 </code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For a list of size specifiers, run:</p>
+<div class="highlight"><pre><span></span><code><span class="go">hdiutil resize -help</span>
+</code></pre></div>
+</div>
 <p>via <a href="https://vidrih.net/2016/03/15/resize-a-sparse-bundle-image-using-terminal">Resize a Sparse Bundle Image using Terminal</a></p>
 <h2 id="disable-ocsp">Disable OCSP<a class="headerlink" href="#disable-ocsp" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="gp">$</span> sudo vim /etc/hosts
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>/etc/hosts
+<div class="highlight"><pre><span></span><code># /etc/hosts
 
-...
+# ...
 
 127.0.0.1       localhost
 255.255.255.255 broadcasthost
@@ -830,7 +905,7 @@ root             ALL = (ALL) ALL
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../../python/publish-to-pypi/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../apple-symbolic-hotkeys/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -839,19 +914,19 @@ root             ALL = (ALL) ALL
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Publish to PyPI
+                Apple Symbolic Hotkeys
               </div>
             </div>
           </a>
         
         
-          <a href="../apple-books/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../reference/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Apple Books
+                References
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -865,10 +940,6 @@ root             ALL = (ALL) ALL
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
-        
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2020 Shant Ergenian
-          </div>
         
         Made with
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
