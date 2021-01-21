@@ -165,7 +165,7 @@ $ cat ~/.ssh/known_hosts
 
 ## Connect via the Internet
 
-!!! warning "WIP:HIGH"
+!!! warning "TODO:HIGH"
 
 Although this guide has many steps, the two most important ones are setting up the **DDNS Service** and **Port Forwarding**. These two will provide immediate, albeit un-secured (and possibly inconvenient) access to the Synology via the internet. The additional steps alleviate these issues.
 
@@ -208,7 +208,7 @@ Although this guide has many steps, the two most important ones are setting up t
 
 ## Firewall
 
-!!! warning "WIP:LOW"
+!!! warning "TODO:LOW"
 
 :octicons-location-24: Where
 
