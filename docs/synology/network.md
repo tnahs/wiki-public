@@ -90,14 +90,6 @@
     3. Under `NFS`
         - Uncheck `Enable NFS`
 
-## Auto-mount SMB on macOS
-
-!!! note "TODO:LOW"
-
-<!-- https://stackoverflow.com/questions/18145509/automount-samba-folder-on-mac -->
-<!-- https://gist.github.com/rudelm/7bcc905ab748ab9879ea -->
-<!-- https://apple.stackexchange.com/questions/697/how-can-i-mount-an-smb-share-from-the-command-line -->
-
 ## Connect via SSH
 
 :octicons-location-24: Where
@@ -159,7 +151,7 @@ $ cat ~/.ssh/known_hosts
 
 ### Login via SSH Key
 
-!!! note "TODO:LOW"
+!!! warning "TODO:LOW"
 
 <!-- https://flatpacklinux.com/2020/01/07/configure-the-ssh-server-on-your-synology-nas/ -->
 

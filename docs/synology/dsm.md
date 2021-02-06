@@ -41,7 +41,7 @@
 
 ## Setup 2FA
 
-!!! note "TODO:MED"
+!!! warning "TODO:MED"
 
 ## Setup Security Advisor
 
@@ -51,7 +51,7 @@
 
 :octicons-question-24: How
 
-- In the `Advanced` menu
+- In the `Advanced` tab
     1. Under `Security Baseline`
         - Select `For home and personal use`
     2. Under `Scan Schedule`
@@ -72,7 +72,7 @@
     2. Set `Recipients` to desired email address(es).
     3. Verify email address(es).
 2. In the `Advanced` tab
-    - Select critical `Events`.
+    - Select `Events`:
 
         |                           Event                           |        Email        |
         | :-------------------------------------------------------- | :-----------------: |
@@ -109,6 +109,19 @@
         | Checksum mismatch                                         | :octicons-check-24: |
         | IP Conflict                                               | :octicons-check-24: |
 
+## Set Network Time Protocol (NTP) Server
+
+:octicons-location-24: Where
+
+`Control Panel` • `Regional Options`
+
+:octicons-question-24: How
+
+- In the `Time` tab
+    - Under `Time Setting`
+        1. Select `Synchronize with NTP server`
+        2. Set `Server address` to `time.nist.gov`
+
 ## Enable Uninterruptible Power Supply (UPS) Support
 
 :octicons-location-24: Where
@@ -142,7 +155,7 @@ A new `Community` tab should now be available in `Package Center`.
 
 ## Reset/Re-install DSM
 
-!!! note "TODO:HIGH"
+See [How to reset my Synology NAS | Synology](https://www.synology.com/en-global/knowledgebase/DSM/tutorial/General_Setup/How_to_reset_my_Synology_NAS)
 
 !!! quote
 

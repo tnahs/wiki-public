@@ -19,7 +19,7 @@ nav:
     - python/install-pyenv.md
     - python/create-a-project.md
     - python/setup-vscode.md
-    - python/testing-and-coverage.md
+    # - python/testing-and-coverage.md
     - python/publish-to-pypi.md
   - macOS:
     - macos/apple-books-library.md
