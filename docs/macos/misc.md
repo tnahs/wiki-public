@@ -77,6 +77,39 @@ user-b ALL = (ALL) NOPASSWD: /bin/usercmd-b, /bin/usercmd-b2 --flag
 
 via [How do I run specific sudo commands without a password?](https://askubuntu.com/a/159009)
 
+## Disable Spotlight Indexing On External Drives
+
+Disable indexing on all drives.
+
+```console
+$ sudo mdutil -a -i off
+/:
+2021-02-20 12:22:51.187 mdutil[69876:1399623] mdutil disabling Spotlight: / -> kMDConfigSearchLevelFSSearchOnly
+    Indexing disabled.
+/System/Volumes/Data:
+2021-02-20 12:22:51.302 mdutil[69876:1399623] mdutil disabling Spotlight: /System/Volumes/Data -> kMDConfigSearchLevelFSSearchOnly
+    Indexing disabled.
+/Volumes/HolosuiteFour:
+2021-02-20 12:22:51.455 mdutil[69876:1399623] mdutil disabling Spotlight: /Volumes/[EXTERNAL-DRIVE] -> kMDConfigSearchLevelFSSearchOnly
+    Indexing disabled.
+```
+
+Enable indexing on the all system drives and directories.
+
+```console
+$sudo mdutil -i on /Volumes/[SYSTEM-DRIVE]
+/:
+    Indexing enabled.
+```
+
+```console
+$ sudo mdutil -i on /System/Volumes/Data
+/System/Volumes/Data:
+    Indexing enabled.
+```
+
+via [How to Disable Spotlight Indexing for External Storage Volumes](https://learns7.com/post/disable-spotlight-indexing-external-storage-volumes/)
+
 ## Get Command Line Tools Version
 
 Run the following command to see the version of CLT:
