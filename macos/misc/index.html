@@ -456,6 +456,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#disable-spotlight-indexing-on-external-drives" class="md-nav__link">
+    Disable Spotlight Indexing On External Drives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get-command-line-tools-version" class="md-nav__link">
     Get Command Line Tools Version
   </a>
@@ -735,6 +742,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#disable-spotlight-indexing-on-external-drives" class="md-nav__link">
+    Disable Spotlight Indexing On External Drives
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#get-command-line-tools-version" class="md-nav__link">
     Get Command Line Tools Version
   </a>
@@ -826,6 +840,29 @@ user-b ALL = (ALL) NOPASSWD: /bin/usercmd-b, /bin/usercmd-b2 --flag
 <a href="https://manpages.ubuntu.com/manpages/precise/en/man5/sudoers.5.html">Ubuntu Manpage: sudoers - default sudo security policy module</a></p>
 </div>
 <p>via <a href="https://askubuntu.com/a/159009">How do I run specific sudo commands without a password?</a></p>
+<h2 id="disable-spotlight-indexing-on-external-drives">Disable Spotlight Indexing On External Drives<a class="headerlink" href="#disable-spotlight-indexing-on-external-drives" title="Permanent link">&para;</a></h2>
+<p>Disable indexing on all drives.</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$</span> sudo mdutil -a -i off
+<span class="go">/:</span>
+<span class="go">2021-02-20 12:22:51.187 mdutil[69876:1399623] mdutil disabling Spotlight: / -&gt; kMDConfigSearchLevelFSSearchOnly</span>
+<span class="go">    Indexing disabled.</span>
+<span class="go">/System/Volumes/Data:</span>
+<span class="go">2021-02-20 12:22:51.302 mdutil[69876:1399623] mdutil disabling Spotlight: /System/Volumes/Data -&gt; kMDConfigSearchLevelFSSearchOnly</span>
+<span class="go">    Indexing disabled.</span>
+<span class="go">/Volumes/HolosuiteFour:</span>
+<span class="go">2021-02-20 12:22:51.455 mdutil[69876:1399623] mdutil disabling Spotlight: /Volumes/[EXTERNAL-DRIVE] -&gt; kMDConfigSearchLevelFSSearchOnly</span>
+<span class="go">    Indexing disabled.</span>
+</code></pre></div>
+<p>Enable indexing on the all system drives and directories.</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$</span>sudo mdutil -i on /Volumes/<span class="o">[</span>SYSTEM-DRIVE<span class="o">]</span>
+<span class="go">/:</span>
+<span class="go">    Indexing enabled.</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="gp">$</span> sudo mdutil -i on /System/Volumes/Data
+<span class="go">/System/Volumes/Data:</span>
+<span class="go">    Indexing enabled.</span>
+</code></pre></div>
+<p>via <a href="https://learns7.com/post/disable-spotlight-indexing-external-storage-volumes/">How to Disable Spotlight Indexing for External Storage Volumes</a></p>
 <h2 id="get-command-line-tools-version">Get Command Line Tools Version<a class="headerlink" href="#get-command-line-tools-version" title="Permanent link">&para;</a></h2>
 <p>Run the following command to see the version of CLT:</p>
 <div class="highlight"><pre><span></span><code><span class="gp">$</span> xcode-select --version
