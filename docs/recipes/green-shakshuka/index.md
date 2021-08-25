@@ -4,7 +4,7 @@ URL: https://ottolenghi.co.uk/recipes/braised-eggs-with-leek-and-za-atar
 Yield: 6 Servings
 ---
 
-# Braised eggs with leek and za’atar aka Green Shakshuka
+# Green Shakshuka
 
 Ingredients
 

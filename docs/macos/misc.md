@@ -129,6 +129,61 @@ install-time: 1608921954
 groups: com.apple.FindSystemFiles.pkg-group
 ```
 
+## Format to Filesystems not in Disk Utility
+
+```console
+$ diskutil listFilesystems
+Formattable file systems
+
+These file system personalities can be used for erasing and partitioning.
+When specifying a personality as a parameter to a verb, case is not considered.
+Certain common aliases (also case-insensitive) are listed below as well.
+
+-------------------------------------------------------------------------------
+PERSONALITY                     USER VISIBLE NAME
+-------------------------------------------------------------------------------
+Case-sensitive APFS             APFS (Case-sensitive)
+  (or) APFSX
+APFS                            APFS
+  (or) APFSI
+ExFAT                           ExFAT
+Free Space                      Free Space
+  (or) FREE
+MS-DOS                          MS-DOS (FAT)
+MS-DOS FAT12                    MS-DOS (FAT12)
+MS-DOS FAT16                    MS-DOS (FAT16)
+MS-DOS FAT32                    MS-DOS (FAT32)
+  (or) FAT32
+HFS+                            Mac OS Extended
+Case-sensitive HFS+             Mac OS Extended (Case-sensitive)
+  (or) HFSX
+Case-sensitive Journaled HFS+   Mac OS Extended (Case-sensitive, Journaled)
+  (or) JHFSX
+Journaled HFS+                  Mac OS Extended (Journaled)
+  (or) JHFS+
+````
+
+```console
+$ diskutil list
+
+...
+
+/dev/disk2 (external, physical):
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:     FDisk_partition_scheme                        *15.9 GB    disk2
+   1:               Windows_NTFS SDCARD                  15.9 GB    disk2s1
+```
+
+```shell
+sudo diskutil eraseDisk [PERSONALITY] [DISK_NAME] MBRFormat [LOCATION]
+```
+
+Format Disk to FAT32:
+
+```console
+sudo diskutil eraseDisk FAT32 MYDISK MBRFormat /dev/disk2
+```
+
 ## Resize Sparsebundles
 
 To compact the image, empty the trash, un-mount it and run:

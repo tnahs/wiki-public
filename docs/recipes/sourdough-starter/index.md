@@ -10,8 +10,8 @@ Yield: 2 Loaves
 
 ### Ingredients
 
-- [ ] 50g Rye or whole wheat flour
-- [ ] 50g Water at room temperature
+- [ ] 50g rye or whole wheat flour
+- [ ] 50g water at room temperature
 - [ ] 2 containers
 
 ### Directions

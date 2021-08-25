@@ -4,7 +4,14 @@ site_author: Shant Ergenian
 theme:
   name: material
   palette:
-    primary: deep purple
+    - scheme: slate
+      toggle:
+        icon: material/eye-outline
+        name: Switch to light mode
+    - scheme: default
+      toggle:
+        icon: material/eye
+        name: Switch to dark mode
   font:
     code: JetBrains Mono
   features:
@@ -15,34 +22,32 @@ theme:
 
 nav:
   - Python:
-    - python/install-poetry.md
-    - python/install-pyenv.md
-    - python/create-a-project.md
-    - python/setup-vscode.md
-    # - python/testing-and-coverage.md
-    - python/publish-to-pypi.md
+      - python/install-poetry.md
+      - python/install-pyenv.md
+      - python/create-a-project.md
+      - python/setup-vscode.md
+      # - python/testing-and-coverage.md
+      - python/publish-to-pypi.md
   - macOS:
-    - macos/apple-books-library.md
-    - macos/apple-symbolic-hotkeys.md
-    - macos/misc.md
-    - macos/reference.md
-  # - git:
-    # - git/01-create-a-new-repo.md
+      - macos/apple-books-library.md
+      - macos/apple-symbolic-hotkeys.md
+      - macos/misc.md
+      - macos/reference.md
+      - macos/ssh.md
   - Synology:
-    - synology/router.md
-    - synology/dsm.md
-    - synology/network.md
-    - synology/data.md
-    - synology/extras.md
-    - synology/reference.md
+      - synology/router.md
+      - synology/dsm.md
+      - synology/network.md
+      - synology/data.md
+      - synology/extras.md
+      - synology/reference.md
   - Recipes:
-    - recipes/sourdough-starter/index.md
-    - recipes/sourdough-bread/index.md
-    - recipes/alton-browns-ginger-snaps-cookies/index.md
-    # - recipes/braised-eggs-with-leek-and-zaatar-aka-green-shakshuka/index.md
-    # - recipes/braised-eggs-with-beef-smoked-aubergine-and-tomato/index.md
-    # - recipes/empanadas-con-queso/index.md
-
+      - recipes/sourdough-starter/index.md
+      - recipes/sourdough-bread/index.md
+      - recipes/green-shakshuka/index.md
+      - recipes/empanadas-con-queso/index.md
+      - recipes/alton-browns-ginger-snaps-cookies/index.md
+      - recipes/vospov-kufte/index.md
 
 markdown_extensions:
   - footnotes

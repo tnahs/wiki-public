@@ -12,6 +12,7 @@ Set the python version with `pyenv`.
 ``` console
 $ pyenv local 3.8.0
 ```
+<!-- config virtualenvs.in-project true -->
 
 !!! note
 
