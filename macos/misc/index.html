@@ -12,7 +12,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-6.2.3">
     
     
       
@@ -24,10 +24,6 @@
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#7e56c2">
         
       
     
@@ -51,10 +47,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="">
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="">
       
   
     
@@ -470,6 +468,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#format-to-filesystems-not-in-disk-utility" class="md-nav__link">
+    Format to Filesystems not in Disk Utility
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resize-sparsebundles" class="md-nav__link">
     Resize Sparsebundles
   </a>
@@ -506,6 +511,19 @@
   <li class="md-nav__item">
     <a href="../reference/" class="md-nav__link">
       References
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../ssh/" class="md-nav__link">
+      ssh
     </a>
   </li>
 
@@ -679,8 +697,47 @@
 
 
   <li class="md-nav__item">
+    <a href="../../recipes/green-shakshuka/" class="md-nav__link">
+      Green Shakshuka
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/empanadas-con-queso/" class="md-nav__link">
+      Empanadas con Queso
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
     <a href="../../recipes/alton-browns-ginger-snaps-cookies/" class="md-nav__link">
       Alton Brown's Ginger Snaps Cookies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/vospov-kufte/" class="md-nav__link">
+      Red Lentil Kebabs (Vospov Kufte)
     </a>
   </li>
 
@@ -751,6 +808,13 @@
         <li class="md-nav__item">
   <a href="#get-command-line-tools-version" class="md-nav__link">
     Get Command Line Tools Version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format-to-filesystems-not-in-disk-utility" class="md-nav__link">
+    Format to Filesystems not in Disk Utility
   </a>
   
 </li>
@@ -875,6 +939,53 @@ user-b ALL = (ALL) NOPASSWD: /bin/usercmd-b, /bin/usercmd-b2 --flag
 <span class="go">location: /</span>
 <span class="go">install-time: 1608921954</span>
 <span class="go">groups: com.apple.FindSystemFiles.pkg-group</span>
+</code></pre></div>
+<h2 id="format-to-filesystems-not-in-disk-utility">Format to Filesystems not in Disk Utility<a class="headerlink" href="#format-to-filesystems-not-in-disk-utility" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="gp">$</span> diskutil listFilesystems
+<span class="go">Formattable file systems</span>
+
+<span class="go">These file system personalities can be used for erasing and partitioning.</span>
+<span class="go">When specifying a personality as a parameter to a verb, case is not considered.</span>
+<span class="go">Certain common aliases (also case-insensitive) are listed below as well.</span>
+
+<span class="go">-------------------------------------------------------------------------------</span>
+<span class="go">PERSONALITY                     USER VISIBLE NAME</span>
+<span class="go">-------------------------------------------------------------------------------</span>
+<span class="go">Case-sensitive APFS             APFS (Case-sensitive)</span>
+<span class="go">  (or) APFSX</span>
+<span class="go">APFS                            APFS</span>
+<span class="go">  (or) APFSI</span>
+<span class="go">ExFAT                           ExFAT</span>
+<span class="go">Free Space                      Free Space</span>
+<span class="go">  (or) FREE</span>
+<span class="go">MS-DOS                          MS-DOS (FAT)</span>
+<span class="go">MS-DOS FAT12                    MS-DOS (FAT12)</span>
+<span class="go">MS-DOS FAT16                    MS-DOS (FAT16)</span>
+<span class="go">MS-DOS FAT32                    MS-DOS (FAT32)</span>
+<span class="go">  (or) FAT32</span>
+<span class="go">HFS+                            Mac OS Extended</span>
+<span class="go">Case-sensitive HFS+             Mac OS Extended (Case-sensitive)</span>
+<span class="go">  (or) HFSX</span>
+<span class="go">Case-sensitive Journaled HFS+   Mac OS Extended (Case-sensitive, Journaled)</span>
+<span class="go">  (or) JHFSX</span>
+<span class="go">Journaled HFS+                  Mac OS Extended (Journaled)</span>
+<span class="go">  (or) JHFS+</span>
+<span class="go">````</span>
+
+<span class="go">```console</span>
+<span class="gp">$</span> diskutil list
+
+<span class="go">...</span>
+
+<span class="go">/dev/disk2 (external, physical):</span>
+<span class="gp">   #</span>:                       TYPE NAME                    SIZE       IDENTIFIER
+<span class="go">   0:     FDisk_partition_scheme                        *15.9 GB    disk2</span>
+<span class="go">   1:               Windows_NTFS SDCARD                  15.9 GB    disk2s1</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>sudo diskutil eraseDisk <span class="o">[</span>PERSONALITY<span class="o">]</span> <span class="o">[</span>DISK_NAME<span class="o">]</span> MBRFormat <span class="o">[</span>LOCATION<span class="o">]</span>
+</code></pre></div>
+<p>Format Disk to FAT32:</p>
+<div class="highlight"><pre><span></span><code><span class="go">sudo diskutil eraseDisk FAT32 MYDISK MBRFormat /dev/disk2</span>
 </code></pre></div>
 <h2 id="resize-sparsebundles">Resize Sparsebundles<a class="headerlink" href="#resize-sparsebundles" title="Permanent link">&para;</a></h2>
 <p>To compact the image, empty the trash, un-mount it and run:</p>
