@@ -45,9 +45,9 @@ nav:
       - recipes/sourdough-starter/index.md
       - recipes/sourdough-bread/index.md
       - recipes/green-shakshuka/index.md
-      - recipes/empanadas-con-queso/index.md
       - recipes/alton-browns-ginger-snaps-cookies/index.md
-      - recipes/vospov-kufte/index.md
+      # - recipes/empanadas-con-queso/index.md
+      # - recipes/vospov-kufte/index.md
 
 markdown_extensions:
   - footnotes
