@@ -2,7 +2,7 @@
 
 ## Docker
 
-!!! warning "TODO:LOW"
+!!! warning "TODO"
 
 ## Plex w/ Docker
 
@@ -10,7 +10,7 @@
 
     Make sure `users` has read/write permissions otherwise Plex won't see media.
 
-    go into the docer terminal and check the permissions
+    go into the docker terminal and check the permissions
 
     ```console
     root@plex:/#
@@ -48,7 +48,7 @@ Do not use XXXX.local. Then you get no server
 
 <https://www.wundertech.net/how-to-install-portainer-on-a-synology-nas/>
 
-```
+```console
 sudo docker run \
     -p 8000:8000 \
     -p 9000:9000 \
@@ -58,40 +58,3 @@ sudo docker run \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /volume1/docker/portainer-ce:/data portainer/portainer-ce
 ```
-
-## youtube-dl
-
-<https://www.youtube.com/watch?v=Y-lS-_4mbvc>
-<https://nashosted.com/?p=554>
-
-```console
-$ docker run -d --name YouTubeDL-Material \
-              -v /your/appdata/location:/app/appdata \
-              -v /your/audio/location:/app/audio \
-              -v /your/video/location:/app/video \
-              -v /your/subscriptions/location:/app/subscriptions \
-              -v /your/users/location:/app/users \
-              -p 8998:17442 \
-              tzahi12345/youtubedl-material:latest
-```
-
-```
-2021-03-28T20:38:05.785Z ERROR: Failed to get config file
-```
-
-```
---all-subs,,--sub-format,,srt,,--embed-subs
-```
-
-```
-%(uploader)s---%(upload_date)s---%(title)s---[%(id)s]
-```
-
-<https://github.com/Tzahi12345/YoutubeDL-Material/issues/285>
-
-```json
-"custom_args": "--all-subs,,--sub-format,,srt,,--embed-subs",
-"custom_output": "%(uploader)s---%(upload_date)s---%(title)s---[%(id)s]"
-```
-
-<https://registry.hub.docker.com/r/tzahi12345/youtubedl-material>

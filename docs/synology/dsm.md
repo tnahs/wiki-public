@@ -41,7 +41,7 @@
 
 ## Setup 2FA
 
-!!! warning "TODO:MED"
+!!! warning "TODO"
 
 ## Setup Security Advisor
 

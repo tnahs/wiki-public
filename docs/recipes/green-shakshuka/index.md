@@ -24,6 +24,6 @@ This is a quick way to get a very comforting meal on the table in a wonderfully 
 
 1. Put the butter and 1 tablespoon of oil into a large sauté pan, for which you have a lid, and place on a medium high heat. Once the butter starts to foam, add the leeks, ½ teaspoon of salt and plenty of pepper. Fry for 3 minutes, stirring frequently, until the leeks are soft. Add the cumin, lemon and vegetable stock and boil rapidly for 4–5 minutes, until most of the stock has evaporated. Fold in the spinach and cook for a minute, until wilted, then reduce the heat to medium.
 2. Use a large spoon to make 6 indentations in the mixture and break one egg into each space. Sprinkle the eggs with a pinch of salt, dot the feta around the eggs, then cover the pan. Simmer for 4–5 minutes, until the egg whites are cooked but the yolks are still runny.
-3. Mix the za’atar with the remaining tablespoon of oil and brush over the eggs. Serve at once, straight from the pan.
+3. Mix the za'atar with the remaining tablespoon of oil and brush over the eggs. Serve at once, straight from the pan.
 
 ![""](images/braised-eggs-with-leek-and-zaatar.jpg)

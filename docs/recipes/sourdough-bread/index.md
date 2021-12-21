@@ -59,7 +59,7 @@ The levain can be prepared in the evening and allowed to rise overnight. If time
 
 Combine **800g of white flour**, **200g of whole wheat flour** and **650g of water at 75°F**. Mix thoroughly until you have a fully homogenous ball of dough. Place in a sealed container and let it rest in a 75°F environment for 30-45 minutes. This is period is called the _Autolyse_[^autolyse].
 
-After the autolyse, sprinke **25g of salt** onto the dough and incorporate. Knead and stretch the dough for a few minutes until it beings to stiffen. Roll it into a tight ball, place it back into its sealed container and return it to its 75°F environment.
+After the autolyse, sprinkle **25g of salt** onto the dough and incorporate. Knead and stretch the dough for a few minutes until it beings to stiffen. Roll it into a tight ball, place it back into its sealed container and return it to its 75°F environment.
 
 !!! tip
 
@@ -127,6 +127,8 @@ One hour before baking, preheat your oven to 500°F and place your [dutch oven](
 
 Once the oven reaches temperature set a timer for about 30 minutes. It's important that the dutch oven get as close as possible to 500°F[^500F]. An oven at temperature doesn't necessarily mean its contents are at that temperature. Moreover, cast iron takes time to heat up (but retains it well!). Therefore, another 30 or so minutes will allow the dutch oven's temperature to climb. Alternatively a temperature gun can be used to check the dutch oven's temperature.
 
+!!! warning "TODO"
+
 <!-- 
 TODO Flour the bottom of the bread with semolina
 TODO Flour the bottom of the dutch oven with semolina
@@ -167,4 +169,4 @@ This table[^proofing-time-table] should be used as a rough guide. With just the 
 
 ## Coil Fold
 
-TODO
+!!! warning "TODO"

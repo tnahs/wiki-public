@@ -6,7 +6,7 @@
 
 ## What to Archive
 
-Apple Books stores the bulk if its data in two locations:
+Apple Books stores the bulk of its data in two locations:
 
 1. The location of EPUBs, PDFs, Audiobooks, etc.:
 

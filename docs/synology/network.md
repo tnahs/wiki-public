@@ -151,27 +151,39 @@ $ cat ~/.ssh/known_hosts
 
 ### Login via SSH Key
 
-!!! warning "TODO:LOW"
+!!! warning "TODO"
 
 <!-- https://flatpacklinux.com/2020/01/07/configure-the-ssh-server-on-your-synology-nas/ -->
 
 ## Connect via the Internet
 
-!!! warning "TODO:HIGH"
+!!! warning "TODO"
 
 Although this guide has many steps, the two most important ones are setting up the **DDNS Service** and **Port Forwarding**. These two will provide immediate, albeit un-secured (and possibly inconvenient) access to the Synology via the internet. The additional steps alleviate these issues.
 
 ### Setup DDNS with `synology.me`
 
+!!! warning "TODO"
+
 ### Add SSL Certificate via Let's Encrypt
+
+!!! warning "TODO"
 
 ### Setup Application Portals (Optional)
 
+!!! warning "TODO"
+
 ### Setup Connection via Port Forwarding
+
+!!! warning "TODO"
 
 ### Setup Connection via Reverse Proxy
 
+!!! warning "TODO"
+
 #### Setup Synology Firewall
+
+!!! warning "TODO"
 
 #### Setup Port Forwarding
 
@@ -200,7 +212,7 @@ Although this guide has many steps, the two most important ones are setting up t
 
 ## Firewall
 
-!!! warning "TODO:LOW"
+!!! warning "TODO"
 
 :octicons-location-24: Where
 

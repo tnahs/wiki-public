@@ -26,7 +26,6 @@ nav:
       - python/install-pyenv.md
       - python/create-a-project.md
       - python/setup-vscode.md
-      # - python/testing-and-coverage.md
       - python/publish-to-pypi.md
   - macOS:
       - macos/apple-books-library.md
@@ -39,15 +38,19 @@ nav:
       - synology/dsm.md
       - synology/network.md
       - synology/data.md
-      - synology/extras.md
       - synology/reference.md
+      # - synology/extras.md
   - Recipes:
       - recipes/sourdough-starter/index.md
       - recipes/sourdough-bread/index.md
-      - recipes/green-shakshuka/index.md
+      - recipes/pizza-dough/index.md
+      - recipes/pizza-sauce/index.md
       - recipes/alton-browns-ginger-snaps-cookies/index.md
+      - recipes/alton-browns-oatmeal-banana-bread/index.md
+      - recipes/green-shakshuka/index.md
+      - recipes/arepas-rellenas/index.md
+      - recipes/reina-pepiada/index.md
       # - recipes/empanadas-con-queso/index.md
-      # - recipes/vospov-kufte/index.md
 
 markdown_extensions:
   - footnotes
