@@ -179,15 +179,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../router/" class="md-tabs__link md-tabs__link--active">
+      <a href="../router/" class="md-tabs__link">
         Synology
       </a>
     </li>
@@ -436,14 +434,12 @@
       
 
 
-  
-
 
   
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
     
     <label class="md-nav__link" for="nav-3">
       Synology
@@ -506,78 +502,6 @@
     <a href="../data/" class="md-nav__link">
       Data
     </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Extras
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
-      Extras
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    Docker
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#plex-w-docker" class="md-nav__link">
-    Plex w/ Docker
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#portainer" class="md-nav__link">
-    Portainer
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#youtube-dl" class="md-nav__link">
-    youtube-dl
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -656,8 +580,21 @@
 
 
   <li class="md-nav__item">
-    <a href="../../recipes/green-shakshuka/" class="md-nav__link">
-      Green Shakshuka
+    <a href="../../recipes/pizza-dough/" class="md-nav__link">
+      Pizza Dough
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/pizza-sauce/" class="md-nav__link">
+      Pizza Sauce
     </a>
   </li>
 
@@ -671,6 +608,58 @@
   <li class="md-nav__item">
     <a href="../../recipes/alton-browns-ginger-snaps-cookies/" class="md-nav__link">
       Alton Brown's Ginger Snaps Cookies
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/alton-browns-oatmeal-banana-bread/" class="md-nav__link">
+      Alton Brown's Oatmeal Banana Bread
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/green-shakshuka/" class="md-nav__link">
+      Green Shakshuka
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/arepas-rellenas/" class="md-nav__link">
+      Arepas Rellenas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../recipes/reina-pepiada/" class="md-nav__link">
+      Reina Pepiada
     </a>
   </li>
 
@@ -725,13 +714,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#youtube-dl" class="md-nav__link">
-    youtube-dl
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -748,13 +730,13 @@
                 <h1 id="extras">Extras<a class="headerlink" href="#extras" title="Permanent link">&para;</a></h1>
 <h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
-<p class="admonition-title">TODO:LOW</p>
+<p class="admonition-title">TODO</p>
 </div>
 <h2 id="plex-w-docker">Plex w/ Docker<a class="headerlink" href="#plex-w-docker" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Make sure <code>users</code> has read/write permissions otherwise Plex won&rsquo;t see media.</p>
-<p>go into the docer terminal and check the permissions</p>
+<p>go into the docker terminal and check the permissions</p>
 <div class="highlight"><pre><span></span><code><span class="gp">root@plex:/#</span>
 
 <span class="gp">$</span> ls -la
@@ -780,38 +762,15 @@
 <p><a href="https://mariushosting.com/how-to-install-plex-on-your-synology-nas/">https://mariushosting.com/how-to-install-plex-on-your-synology-nas/</a></p>
 <h2 id="portainer">Portainer<a class="headerlink" href="#portainer" title="Permanent link">&para;</a></h2>
 <p><a href="https://www.wundertech.net/how-to-install-portainer-on-a-synology-nas/">https://www.wundertech.net/how-to-install-portainer-on-a-synology-nas/</a></p>
-<div class="highlight"><pre><span></span><code>sudo docker run \
-    -p 8000:8000 \
-    -p 9000:9000 \
-    --detach \
-    --name=portainer-ce \
-    --restart=always \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -v /volume1/docker/portainer-ce:/data portainer/portainer-ce
+<div class="highlight"><pre><span></span><code><span class="go">sudo docker run \</span>
+<span class="go">    -p 8000:8000 \</span>
+<span class="go">    -p 9000:9000 \</span>
+<span class="go">    --detach \</span>
+<span class="go">    --name=portainer-ce \</span>
+<span class="go">    --restart=always \</span>
+<span class="go">    -v /var/run/docker.sock:/var/run/docker.sock \</span>
+<span class="go">    -v /volume1/docker/portainer-ce:/data portainer/portainer-ce</span>
 </code></pre></div>
-<h2 id="youtube-dl">youtube-dl<a class="headerlink" href="#youtube-dl" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.youtube.com/watch?v=Y-lS-_4mbvc">https://www.youtube.com/watch?v=Y-lS-_4mbvc</a>
-<a href="https://nashosted.com/?p=554">https://nashosted.com/?p=554</a></p>
-<div class="highlight"><pre><span></span><code><span class="gp">$</span> docker run -d --name YouTubeDL-Material <span class="se">\</span>
-              -v /your/appdata/location:/app/appdata <span class="se">\</span>
-              -v /your/audio/location:/app/audio <span class="se">\</span>
-              -v /your/video/location:/app/video <span class="se">\</span>
-              -v /your/subscriptions/location:/app/subscriptions <span class="se">\</span>
-              -v /your/users/location:/app/users <span class="se">\</span>
-              -p <span class="m">8998</span>:17442 <span class="se">\</span>
-              tzahi12345/youtubedl-material:latest
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>2021-03-28T20:38:05.785Z ERROR: Failed to get config file
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>--all-subs,,--sub-format,,srt,,--embed-subs
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>%(uploader)s---%(upload_date)s---%(title)s---[%(id)s]
-</code></pre></div>
-<p><a href="https://github.com/Tzahi12345/YoutubeDL-Material/issues/285">https://github.com/Tzahi12345/YoutubeDL-Material/issues/285</a></p>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;custom_args&quot;</span><span class="p">:</span> <span class="s2">&quot;--all-subs,,--sub-format,,srt,,--embed-subs&quot;</span><span class="p">,</span>
-<span class="nt">&quot;custom_output&quot;</span><span class="p">:</span> <span class="s2">&quot;%(uploader)s---%(upload_date)s---%(title)s---[%(id)s]&quot;</span>
-</code></pre></div>
-<p><a href="https://registry.hub.docker.com/r/tzahi12345/youtubedl-material">https://registry.hub.docker.com/r/tzahi12345/youtubedl-material</a></p>
                 
               
               
@@ -826,41 +785,6 @@
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../data/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Data
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../reference/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Reference
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
